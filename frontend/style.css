@@ -59,8 +59,9 @@ p {
 }
 
 a {
-  color: rgb(197, 82, 47);
+  color: rgb(197, 185, 47);
   text-decoration: none;
+  font-weight: bold;
 }
 
 #a {
@@ -148,7 +149,6 @@ span {
   display: inline; 
   animation: blink 1s infinite;
   color: rgb(128, 0, 32);
-  font-size: 23px;
   font-weight: bold;
 }
 
