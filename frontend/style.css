@@ -148,6 +148,7 @@ span {
   display: inline; 
   animation: blink 1s infinite;
   color: rgb(128, 0, 32);
+  font-size: 23px;
   font-weight: bold;
 }
 
