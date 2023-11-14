@@ -17,7 +17,7 @@ jobs:
 
     - name: Deploy to Google Cloud Storage
       run: |
-        gsutil cp ./Frontend/* gs://cvbucket/
+        gsutil cp ./frontend/* gs://cvbucket/
 
     - name: Invalidate Cloud CDN Cache
       run: |
