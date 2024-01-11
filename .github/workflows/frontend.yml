@@ -1,0 +1,27 @@
+name: Deploy to Google Cloud Storage
+
+on: 
+  push:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+    - uses: actions/checkout@v2
+
+    - name: Set up Cloud SDK
+      uses: google-github-actions/setup-gcloud@v0.2.0
+      with:
+        service_account_key: ${{ secrets.GCP_SA_KEY }}
+        project_id: ${{ secrets.GCP_PROJECT_ID }}
+
+    - name: Deploy to Google Cloud Storage
+      run: |
+        gsutil cp ./frontend/* gs://cvbucket/
+
+    - name: Invalidate Cloud CDN Cache
+      run: |
+        gcloud compute url-maps invalidate-cdn-cache cvcloud-lb --path "/*" --async
+      env:
+        CLOUDSDK_CORE_PROJECT: ${{ secrets.GCP_PROJECT_ID }}
+        GOOGLE_APPLICATION_CREDENTIALS: /tmp/gcloud-sa.json

@@ -1,0 +1,204 @@
+/* Default styles */
+body {
+  background-color: #272727;
+  padding: 10px;
+  font-family: Arial, sans-serif;
+}
+
+.fakeButtons {
+  height: 10px;
+  width: 10px;
+  border-radius: 50%;
+  border: 1px solid #000;
+  position: relative;
+  top: 6px;
+  left: 6px;
+  background-color: #ff3b47;
+  border-color: #9d252b;
+  display: inline-block;
+}
+
+.fakeMinimize {
+  left: 11px;
+  background-color: #ffc100;
+  border-color: #9d802c;
+}
+
+.fakeZoom {
+  left: 16px;
+  background-color: #00d742;
+  border-color: #049931;
+}
+
+.fakeMenu {
+  max-width: 100%;
+  height: 25px;
+  background-color: #bbb;
+  margin: 0 auto;
+  border-top-right-radius: 5px;
+  border-top-left-radius: 5px;
+}
+
+.fakeScreen {
+  background-color: #151515;
+  box-sizing: border-box;
+  width: 100%;
+  margin: 0 auto;
+  padding: 20px;
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+p {
+  text-align: left;
+  font-size: 1.25em;
+  white-space: normal;
+  overflow: hidden;
+  color: rgb(197, 82, 47);
+  text-decoration: none;
+}
+
+a {
+  color: rgb(197, 185, 47);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+#a {
+  color: #0f0;
+}
+
+#c {
+  color: rgb(241, 246, 247);
+}
+
+#b {
+  color: #632ff1;
+}
+
+#k {
+  animation: change 1s;
+  color: #0f0;
+}
+
+/* Media queries for responsiveness */
+@media (max-width: 768px) {
+  .fakeMenu,
+  .fakeScreen {
+    width: 90%;
+  }
+
+  p {
+    font-size: 1em;
+  }
+}
+
+@media (max-width: 480px) {
+  .fakeMenu,
+  .fakeScreen {
+    width: 100%;
+  }
+
+  p {
+    font-size: 0.9em;
+  }
+}
+
+span {
+  color: #fff;
+  font-weight: bold;
+}
+
+.line1 {
+  color: #9CD9F0;
+  animation: type .5s 1s steps(20, end) forwards;
+}
+
+.cursor1 {
+  animation: blink 1s 2s 2 forwards;
+}
+
+.line2 {
+  color: #CDEE69;
+  animation: type .5s 4.25s steps(20, end) forwards;
+}
+
+.cursor2 {
+  animation: blink 1s 5.25s 2 forwards;
+}
+
+.line3 {
+  color: #E09690;
+  animation: type .5s 7.5s steps(20, end) forwards;
+}
+
+.cursor3 {
+  animation: blink 1s 8.5s 2 forwards;
+}
+
+.line4 {
+  color: #fff;
+  animation: type .5s 10.75s steps(20, end) forwards;
+}
+
+.cursor4 {
+  animation: blink 1s 11.5s infinite;
+}
+
+#visitor-counter {
+  display: inline; 
+  animation: blink 1s infinite;
+  color: rgb(128, 0, 32);
+  font-weight: bold;
+}
+
+@keyframes blink {
+  0%, 40%, 100% {
+    opacity: 0;
+  }
+
+  50%, 90% {
+    opacity: 1;
+  }
+}
+
+@keyframes type {
+  to {
+    width: 17em;
+  }
+}
+
+@keyframes change {
+  0% {
+    color: #0f0;
+  }
+
+  50% {
+    color: #0f0;
+  }
+
+  99% {
+    color: black;
+  }
+}
+
+#console {
+  font-family: courier, monospace;
+  color: #fff;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+  font-size: 14px;
+  word-wrap: break-word;
+}
+
+#info {
+  font-family: courier, monospace;
+  color: #fff;
+  max-width: 750px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 100px;
+  font-size: 14px;
+}
